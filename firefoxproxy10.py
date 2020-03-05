@@ -13,7 +13,7 @@ def proxy():
     # data.txt proxies written like that 120.0.0.1:8080
         
         for _ in file:
-            z = _[:-1].split(':') #deleting new line sybmol after split the proxy address ["120.0.0.1","8080/n"]
+            z = _[:-1].split(':') #deleting new line sybmol after split the proxy address ["120.0.0.1","8080\n"]
             profile = webdriver.FirefoxProfile()
             profile.set_preference("network.proxy.type",1)
             profile.set_preference("network.proxy.http",z[0])
